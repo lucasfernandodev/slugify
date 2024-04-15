@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+#root {
+  height: fit-content;
+}
+
+:root {
+  --black-400: #131318;
+  --black-600: #141419;
+
+  --red-400: #FF7878;
+
+  --blue-400: #78BBFF;
+
+  --purple-400: #261946;
+
+  --white-100: #F0F0FF;
+  --gray-400: #90909F;
+
+  --app-bg-color: var(--black-400);
+  --app-text-color: var(--gray-400);
+}
+
+body {
+  background-color: var(--app-bg-color);
+  color: var(--app-text-color)
+}
+
+body *:has(*[data-open="true"]){
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+body,
+input,
+button {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

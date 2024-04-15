@@ -1,0 +1,15 @@
+
+.menuLinks{
+  display: flex;
+  list-style: none;
+  gap: 16px
+}
+
+.menuLinks svg{
+  stroke: 1px;
+  transition: 300ms linear;
+}
+
+.menuLinks a:hover svg{
+  stroke: var(--white-100);
+}

@@ -1,0 +1,123 @@
+.header {
+  height: 72px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 64px;
+}
+
+.brand{
+  color: var(--white-100);
+}
+
+.brand, .toggleMenu{
+  position: relative;
+  z-index: 600;
+}
+
+.brand a{
+  display: flex;
+  gap: 8px;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(var(--white-100), #999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand svg{
+  width: 24px;
+  height: auto;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.menu li a {
+  color: rgba(240, 240, 255, 60%);
+  transition: 300ms linear;
+
+  &:hover {
+    color: var(--white-100);
+  }
+
+  &[data-active="true"] {
+    color: var(--white-100);
+  }
+}
+
+.nav__ilustration,
+#social.socialMenu,
+.toggleMenu{
+  display: none;
+}
+
+@media (max-width: 450px){
+  .header{
+    padding: 0px 16px;
+  }
+  .header nav{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--black-400);
+    z-index: 500;
+    overflow: hidden;
+  }
+
+  .header .nav[data-open="false"]{
+    display: none;
+  }
+
+  .header .menu{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+
+
+  .header .menu a{
+    font-size: 2rem;
+  }
+
+  .header .nav__ilustration{
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    z-index: 510;
+  }
+
+  .header #social.socialMenu{
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    z-index: 520;
+    display: flex;
+    transform: translateX(-50%);
+  }
+  .header .toggleMenu{
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background: none;
+    border: none;
+    color:var(--gray-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 250ms linear;
+  }
+
+  .header .toggleMenu:hover{
+    background-color: #3B3B42;
+    color: var(--white-100)
+  }
+}

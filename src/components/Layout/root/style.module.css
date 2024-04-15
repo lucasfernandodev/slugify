@@ -1,0 +1,37 @@
+.layout{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.layout > *{
+  flex-shrink: 0;
+}
+
+.content{
+  flex-grow: 1;
+}
+
+.ilustration,
+.ilustrationMobile{
+  position: absolute;
+  top: 140px;
+  right: 0px;
+  z-index: -1;
+}
+
+.ilustrationMobile{
+  display: none;
+}
+
+@media (max-width: 450px){
+  .ilustration{
+    display: none;
+  }
+  .ilustrationMobile{
+    display: flex;
+    top: 72px;
+  }
+}
