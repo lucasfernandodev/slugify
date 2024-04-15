@@ -35,7 +35,7 @@
   margin-bottom: 42px;
 }
 
-.container button{
+.container a{
   cursor: pointer;
   background: #23232A;
   height: 44px;
@@ -53,12 +53,12 @@
   flex-shrink: 0;
 }
 
-.container button svg{
+.container a svg{
   position: relative;
   transition: 300ms linear;
   left: 0px;
 }
 
-.container button:hover svg{
+.container a:hover svg{
   left: 4px;
 }
